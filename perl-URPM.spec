@@ -4,7 +4,8 @@
 #
 %include	/usr/lib/rpm/macros.perl
 %define		pnam	URPM
-Summary:	URPM module for perl
+Summary:	URPM - module for perl
+Summary(pl):	URPM - modu³ dla perla
 Name:		perl-URPM
 Version:	1.24
 Release:	0.1
@@ -22,8 +23,12 @@ BuildRequires:	packdrake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-The URPM module allows you to manipulate rpm files, rpm header files
-and hdlist files and manage them in memory.
+The URPM module allows you to manipulate rpm files, rpm header files,
+hdlist files and manage them in memory.
+
+%description -l pl
+Modu³ URPM pozwala na manipulowanie plikami rpm, nag³ówkami plików
+rpm, plikami hdlist oraz zarz±dzanie nimi w pamiêci.
 
 %prep
 %setup -q -n %{pnam}-%{version}
