@@ -4,8 +4,8 @@
 #
 %include	/usr/lib/rpm/macros.perl
 %define		pnam	URPM
-Summary:	URPM - module for perl
-Summary(pl):	URPM - modu³ dla perla
+Summary:	URPM - module for Perl
+Summary(pl):	URPM - modu³ dla Perla
 Name:		perl-URPM
 Version:	1.24
 Release:	0.1
@@ -16,10 +16,10 @@ Source0:	%{pnam}-%{version}.tar.bz2
 # Source0-md5:	c7c66a97aa64eac5371cdd1af7c82439
 URL:		http://cvs.mandriva.com/cgi-bin/cvsweb.cgi/soft/perl-URPM/
 BuildRequires:	bzip2-devel
+BuildRequires:	packdrake
+BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-devel >= 4.2.3
 BuildRequires:	rpm-perlprov >= 4.1-13
-BuildRequires:	perl-devel >= 1:5.8.0
-BuildRequires:	packdrake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -55,5 +55,5 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorarch}/URPM
 %{perl_vendorarch}/URPM.pm
 %dir %{perl_vendorarch}/auto/URPM
-%{perl_vendorarch}/auto/URPM/URPM.so
+%attr(755,root,root) %{perl_vendorarch}/auto/URPM/URPM.so
 %{perl_vendorarch}/auto/URPM/URPM.bs
