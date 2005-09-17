@@ -1,19 +1,19 @@
 #
 # Conditional build:
-%bcond_without	tests	# do not perform "make test"
+%bcond_with	tests	# perform "make test" (these fail on PLD)
 #
 %include	/usr/lib/rpm/macros.perl
 %define		pnam	URPM
 Summary:	URPM - module for Perl
 Summary(pl):	URPM - modu³ dla Perla
 Name:		perl-URPM
-Version:	1.24
-Release:	0.1
+Version:	1.27
+Release:	1
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
 # downloaded from http://fr2.rpmfind.net/linux/MandrakeCooker/cooker/SRPMS/main/
 Source0:	%{pnam}-%{version}.tar.bz2
-# Source0-md5:	c7c66a97aa64eac5371cdd1af7c82439
+# Source0-md5:	9e63bc780c9582d6c01cba335b182f96
 URL:		http://cvs.mandriva.com/cgi-bin/cvsweb.cgi/soft/perl-URPM/
 BuildRequires:	bzip2-devel
 BuildRequires:	packdrake
@@ -42,7 +42,7 @@ rpm, plikami hdlist oraz zarz±dzanie nimi w pamiêci.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install \
+%{__make} pure_install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
