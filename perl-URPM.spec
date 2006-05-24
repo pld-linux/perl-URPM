@@ -14,6 +14,7 @@ License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://search.cpan.org/CPAN/authors/id/R/RG/RGARCIA/%{pnam}-%{version}.tar.gz
 # Source0-md5:	75ab766039dde234605086eb0be1dfff
+URL:		http://search.cpan.org/dist/URPM/
 BuildRequires:	bzip2-devel
 BuildRequires:	packdrake
 BuildRequires:	perl-devel >= 1:5.8.0
