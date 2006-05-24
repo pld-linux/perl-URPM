@@ -4,17 +4,16 @@
 #
 %include	/usr/lib/rpm/macros.perl
 %define		pnam	URPM
+%define		pdir	perl-URPM
 Summary:	URPM - module for Perl
 Summary(pl):	URPM - modu³ dla Perla
 Name:		perl-URPM
-Version:	1.27
+Version:	1.42
 Release:	1
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
-# downloaded from http://fr2.rpmfind.net/linux/MandrakeCooker/cooker/SRPMS/main/
-Source0:	%{pnam}-%{version}.tar.bz2
-# Source0-md5:	9e63bc780c9582d6c01cba335b182f96
-URL:		http://cvs.mandriva.com/cgi-bin/cvsweb.cgi/soft/perl-URPM/
+Source0:	http://search.cpan.org/CPAN/authors/id/R/RG/RGARCIA/%{pnam}-%{version}.tar.gz
+# Source0-md5:	75ab766039dde234605086eb0be1dfff
 BuildRequires:	bzip2-devel
 BuildRequires:	packdrake
 BuildRequires:	perl-devel >= 1:5.8.0
