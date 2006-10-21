@@ -5,15 +5,16 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pnam	URPM
 %define		pdir	perl-URPM
-Summary:	URPM - module for Perl
-Summary(pl):	URPM - modu³ dla Perla
+Summary:	URPM - manipulate and manage rpm files, hdlist files and rpm header files
+Summary(pl):	URPM - manipulowanie i zarz±dzanie plikami rpm, hdlist i nag³ówkami rpm
 Name:		perl-URPM
-Version:	1.42
+Version:	1.47
 Release:	1
-License:	GPL or Artistic
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://search.cpan.org/CPAN/authors/id/R/RG/RGARCIA/%{pnam}-%{version}.tar.gz
-# Source0-md5:	75ab766039dde234605086eb0be1dfff
+Source0:	http://www.cpan.org/modules/by-authors/id/R/RG/RGARCIA/%{pnam}-%{version}.tar.gz
+# Source0-md5:	aac0b2a6274dfbf4c1acdd59d30f7c8c
 URL:		http://search.cpan.org/dist/URPM/
 BuildRequires:	bzip2-devel
 BuildRequires:	packdrake
@@ -36,7 +37,9 @@ rpm, plikami hdlist oraz zarz±dzanie nimi w pamiêci.
 %build
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
-%{__make}
+%{__make} \
+	OPTIMIZE="%{rpmcflags}"
+
 %{?with_tests:%{__make} test}
 
 %install
