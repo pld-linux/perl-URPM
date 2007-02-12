@@ -6,7 +6,7 @@
 %define		pnam	URPM
 %define		pdir	perl-URPM
 Summary:	URPM - manipulate and manage rpm files, hdlist files and rpm header files
-Summary(pl):	URPM - manipulowanie i zarz±dzanie plikami rpm, hdlist i nag³ówkami rpm
+Summary(pl.UTF-8):   URPM - manipulowanie i zarzÄ…dzanie plikami rpm, hdlist i nagÅ‚Ã³wkami rpm
 Name:		perl-URPM
 Version:	1.47
 Release:	1
@@ -27,9 +27,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 The URPM module allows you to manipulate rpm files, rpm header files,
 hdlist files and manage them in memory.
 
-%description -l pl
-Modu³ URPM pozwala na manipulowanie plikami rpm, nag³ówkami plików
-rpm, plikami hdlist oraz zarz±dzanie nimi w pamiêci.
+%description -l pl.UTF-8
+ModuÅ‚ URPM pozwala na manipulowanie plikami rpm, nagÅ‚Ã³wkami plikÃ³w
+rpm, plikami hdlist oraz zarzÄ…dzanie nimi w pamiÄ™ci.
 
 %prep
 %setup -q -n %{pnam}-%{version}
