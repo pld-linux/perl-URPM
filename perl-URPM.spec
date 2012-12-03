@@ -8,19 +8,26 @@
 Summary:	URPM - manipulate and manage rpm files, hdlist files and rpm header files
 Summary(pl.UTF-8):	URPM - manipulowanie i zarządzanie plikami rpm, hdlist i nagłówkami rpm
 Name:		perl-URPM
-Version:	1.47
+Version:	4.43
 Release:	1
-# same as perl
-License:	GPL v1+ or Artistic
+License:	GPL v2+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-authors/id/R/RG/RGARCIA/%{pnam}-%{version}.tar.gz
-# Source0-md5:	aac0b2a6274dfbf4c1acdd59d30f7c8c
-URL:		http://search.cpan.org/dist/URPM/
+Source0:	%{pnam}-%{version}.tar.xz
+# Source0-md5:	3a7d80c2f708339fef0055cae9b0f799
+URL:		http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/rpm/perl-URPM
 BuildRequires:	bzip2-devel
-BuildRequires:	packdrake
+BuildRequires:	perl-MDV-Packdrakeng
+BuildRequires:	perl-List-MoreUtils >= 0.32
 BuildRequires:	perl-devel >= 1:5.8.0
-BuildRequires:	rpm-devel >= 4.2.3
+BuildRequires:	rpm-devel >= 5.4
 BuildRequires:	rpm-perlprov >= 4.1-13
+Requires:	rpm
+Requires:	perl(MDV::Packdrakeng)
+Conflicts:	rpm < 1:5.3
+Conflicts:	urpmi < 6.44
+Provides:	perl(URPM::Build) = %{version}-%{release}
+Provides:	perl(URPM::Resolve) = %{version}-%{release}
+Provides:	perl(URPM::Signature) = %{version}-%{release}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -37,6 +44,7 @@ rpm, plikami hdlist oraz zarządzanie nimi w pamięci.
 %build
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
+
 %{__make} \
 	CC="%{__cc}" \
 	OPTIMIZE="%{rpmcflags}"
