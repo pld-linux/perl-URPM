@@ -9,7 +9,7 @@ Summary:	URPM - manipulate and manage rpm files, hdlist files and rpm header fil
 Summary(pl.UTF-8):	URPM - manipulowanie i zarządzanie plikami rpm, hdlist i nagłówkami rpm
 Name:		perl-URPM
 Version:	4.43
-Release:	1
+Release:	2
 License:	GPL v2+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	%{pnam}-%{version}.tar.xz
@@ -23,7 +23,7 @@ BuildRequires:	rpm-devel >= 5.4
 BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	rpm
 Requires:	perl(MDV::Packdrakeng)
-Conflicts:	rpm < 1:5.3
+Conflicts:	rpm < 5.3
 Conflicts:	urpmi < 6.44
 Provides:	perl(URPM::Build) = %{version}-%{release}
 Provides:	perl(URPM::Resolve) = %{version}-%{release}
