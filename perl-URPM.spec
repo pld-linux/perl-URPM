@@ -14,7 +14,7 @@ License:	GPL v2+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	%{pnam}-%{version}.tar.xz
 # Source0-md5:	3a7d80c2f708339fef0055cae9b0f799
-URL:		http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/rpm/perl-URPM
+URL:		https://abf.rosalinux.ru/omv_software/perl-URPM
 BuildRequires:	bzip2-devel
 BuildRequires:	perl-MDV-Packdrakeng
 BuildRequires:	perl-List-MoreUtils >= 0.32
