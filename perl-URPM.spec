@@ -68,4 +68,3 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorarch}/URPM.pm
 %dir %{perl_vendorarch}/auto/URPM
 %attr(755,root,root) %{perl_vendorarch}/auto/URPM/URPM.so
-%{perl_vendorarch}/auto/URPM/URPM.bs
