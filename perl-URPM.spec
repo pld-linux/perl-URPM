@@ -9,7 +9,7 @@ Summary:	URPM - manipulate and manage rpm files, hdlist files and rpm header fil
 Summary(pl.UTF-8):	URPM - manipulowanie i zarządzanie plikami rpm, hdlist i nagłówkami rpm
 Name:		perl-URPM
 Version:	4.43
-Release:	9
+Release:	10
 License:	GPL v2+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	%{pnam}-%{version}.tar.xz
