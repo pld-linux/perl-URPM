@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_with	tests	# perform "make test" (these fail on PLD)
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pnam	URPM
 %define		pdir	perl-URPM
 Summary:	URPM - manipulate and manage rpm files, hdlist files and rpm header files
